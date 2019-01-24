@@ -39,6 +39,11 @@ public class TestCallableResultSets {
                         rs.getString(4)
                 );
             }
+
+            // Gets the last row in the
+            // ResultSet
+            rs.last();
+            System.out.println("Total Number: " + rs.getRow());
         } catch (SQLException e) {
             DBUtil.showErrorMessage(e);
         }

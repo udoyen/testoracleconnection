@@ -33,6 +33,8 @@ public class PreparedStatementRetrieveDemo {
 
             }
 
+            // Gets the last row in the
+            // ResultSet
             rs.last();
             System.out.println("Total Employee : " + rs.getRow());
 
