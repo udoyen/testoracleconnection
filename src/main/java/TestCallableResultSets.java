@@ -18,14 +18,6 @@ public class TestCallableResultSets {
             String deptNumber = scanner.nextLine();
 
             callableStatement.setString(1, deptNumber);
-
-            // Register the two OUT parameters
-//            callableStatement.registerOutParameter(2, Types.JAVA_OBJECT);
-//            callableStatement.registerOutParameter(3, Types.INTEGER);
-
-//            callableStatement.execute();
-
-//            ResultSet rs = (ResultSet) callableStatement.getObject(2);
             ResultSet rs = callableStatement.executeQuery();
 
             String format = "%-10d%-15s%-20d%-25s%n";
