@@ -28,7 +28,6 @@ public class TestTransactionManagement {
             String withdrawSQL = "UPDATE account SET AVAIL_BALANCE = AVAIL_BALANCE - ?, PENDING_BALANCE = AVAIL_BALANCE WHERE ACCOUNT_ID = ?";
             pstmt = Objects.requireNonNull(conn).prepareStatement(withdrawSQL);
             pstmt.setDouble(1, amount);
-//            pstmt.setDouble(2, amount);
             pstmt.setInt(2, fromAccNum);
             int wd = pstmt.executeUpdate();
 
@@ -40,7 +39,6 @@ public class TestTransactionManagement {
             String depositSQL = "UPDATE account SET AVAIL_BALANCE = AVAIL_BALANCE + ?, PENDING_BALANCE = AVAIL_BALANCE WHERE ACCOUNT_ID = ?";
             pstmt = conn.prepareStatement(depositSQL);
             pstmt.setDouble(1, amount);
-//            pstmt.setDouble(2, amount);
             pstmt.setInt(2, toAccNum);
             int cdt = pstmt.executeUpdate();
 
