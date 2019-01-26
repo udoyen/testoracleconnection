@@ -9,8 +9,8 @@ public class DBUtil {
 
     private static final String mySqlUser = "root";
     private static final String mySqlPwd = "admin";
-    private static final String mySQLCS = "jdbc:mysql://172.17.0.2:3306/employees";
-    private static final String mySQLCSBank = "jdbc:mysql://172.17.0.2:3306/newbank";
+    protected static final String mySQLCS = "jdbc:mysql://172.17.0.2:3306/employees";
+    protected static final String mySQLCSBank = "jdbc:mysql://172.17.0.2:3306/newbank";
 
 
     static Connection getConnection(DBType dbType) throws SQLException {
