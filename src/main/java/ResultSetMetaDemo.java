@@ -9,7 +9,7 @@ public class ResultSetMetaDemo {
 
     public static void main(String[] args) {
         try (
-                Connection conn = DBUtil.getConnection(DBType.MYSQLDB, "bank");
+                Connection conn = DBUtil.getConnectionBank(DBType.MYSQLDB);
                 Statement stmt = Objects.requireNonNull(conn).createStatement();
                 ResultSet rs = stmt.executeQuery("SELECT * FROM employee")
                 ) {

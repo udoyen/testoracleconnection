@@ -9,7 +9,7 @@ public class TestTransactionManagement {
 
     public static void main(String[] args) {
         try {
-            Connection conn = DBUtil.getConnection(DBType.MYSQLDB, "bank");
+            Connection conn = DBUtil.getConnectionBank(DBType.MYSQLDB);
             // Prevent the database from committing the transaction results
             Objects.requireNonNull(conn).setAutoCommit(false);
 

@@ -17,11 +17,10 @@ public class DBUtil {
         if (dbType == DBType.MYSQLDB) {
             return DriverManager.getConnection(mySQLCS, mySqlUser, mySqlPwd);
         }
-
         return null;
     }
 
-    static Connection getConnection(DBType dbType, String bank) throws SQLException {
+    static Connection getConnectionBank(DBType dbType) throws SQLException {
         if (dbType == DBType.MYSQLDB) {
             return DriverManager.getConnection(mySQLCSBank, mySqlUser, mySqlPwd);
         }
